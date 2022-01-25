@@ -23,3 +23,5 @@ Bert/Transformer模型压缩与优化加速: https://blog.csdn.net/nature553863/
 https://www.leiphone.com/category/academic/MkV1j604LvPt1wcx.html
 
 BERT轻量化探索—模型剪枝（BERT Pruning）—Rasa维度剪枝:https://blog.csdn.net/ai_1046067944/article/details/103609152 
+
+压缩 BERT 以加快预测速度:https://rasa.com/blog/compressing-bert-for-faster-prediction-2/
