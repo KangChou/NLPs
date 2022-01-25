@@ -20,3 +20,6 @@ zh:[http://fancyerii.github.io/books/mycroft-precise/](http://fancyerii.github.i
 Bert/Transformer模型压缩与优化加速: https://blog.csdn.net/nature553863/article/details/120292394：
 
 可以压缩 BERT 的所有方式：http://mitchgordon.me/machine/learning/2019/11/18/all-the-ways-to-compress-BERT.html
+https://www.leiphone.com/category/academic/MkV1j604LvPt1wcx.html
+
+BERT轻量化探索—模型剪枝（BERT Pruning）—Rasa维度剪枝:https://blog.csdn.net/ai_1046067944/article/details/103609152 
