@@ -2,7 +2,7 @@
 Deep learning speech learning library
 
 一个轻量级、简单易用的 RNN 唤醒词监听器: 
-[https://github.com/MycroftAI/mycroft-precise](https://github.com/MycroftAI/mycroft-precise) 
+[https://github.com/MycroftAI/mycroft-precise](https://github.com/MycroftAI/mycroft-precise) \
 zh:[http://fancyerii.github.io/books/mycroft-precise/](http://fancyerii.github.io/books/mycroft-precise/)
 
 基于树莓派的人工智能小车，实现识别、提示、智能旅游线路、离线图像:
