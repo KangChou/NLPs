@@ -17,4 +17,4 @@ zh:[http://fancyerii.github.io/books/mycroft-precise/](http://fancyerii.github.i
 
 视觉聊天机器人:[https://paperswithcode.com/paper/visual-dialog](https://paperswithcode.com/paper/visual-dialog)
 
-
+Bert/Transformer模型压缩与优化加速: https://blog.csdn.net/nature553863/article/details/120292394
