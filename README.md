@@ -17,4 +17,6 @@ zh:[http://fancyerii.github.io/books/mycroft-precise/](http://fancyerii.github.i
 
 视觉聊天机器人:[https://paperswithcode.com/paper/visual-dialog](https://paperswithcode.com/paper/visual-dialog)
 
-Bert/Transformer模型压缩与优化加速: https://blog.csdn.net/nature553863/article/details/120292394
+Bert/Transformer模型压缩与优化加速: https://blog.csdn.net/nature553863/article/details/120292394：
+
+可以压缩 BERT 的所有方式：http://mitchgordon.me/machine/learning/2019/11/18/all-the-ways-to-compress-BERT.html
