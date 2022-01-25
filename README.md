@@ -15,3 +15,6 @@ zh:[http://fancyerii.github.io/books/mycroft-precise/](http://fancyerii.github.i
 中文 NLP 资源精选列表 中文自然语言处理相关资料:
 [https://github.com/crownpku/Awesome-Chinese-NLP](https://github.com/crownpku/Awesome-Chinese-NLP)
 
+视觉聊天机器人:[https://paperswithcode.com/paper/visual-dialog](https://paperswithcode.com/paper/visual-dialog)
+
+
