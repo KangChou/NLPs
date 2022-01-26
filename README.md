@@ -35,3 +35,7 @@ BERT轻量化探索—模型剪枝（BERT Pruning）—Rasa维度剪枝:https://
 计算语言学协会第 58 届年会论文集:https://aclanthology.org/volumes/2020.acl-main/
 
 计算语言学2协会2021年会论文搜集：https://aclanthology.org/events/acl-2021/
+
+中文BERT全词掩蔽预训练（中文BERT-wwm系列模型）[https://github.com/ymcui/Chinese-BERT-wwm](https://github.com/ymcui/Chinese-BERT-wwm)
+
+一个大规模的中文跨领域面向任务的对话数据集:[https://github.com/thu-coai/CrossWOZ](https://github.com/thu-coai/CrossWOZ)
