@@ -27,3 +27,5 @@ BERT轻量化探索—模型剪枝（BERT Pruning）—Rasa维度剪枝:https://
 压缩 BERT 以加快预测速度:https://rasa.com/blog/compressing-bert-for-faster-prediction-2/
 
 论文综述与BERT相关最新论文:[https://github.com/tomohideshibata/BERT-related-papers](https://github.com/tomohideshibata/BERT-related-papers)
+
+中文自然语言排行榜及论文查询:[https://www.cluebenchmarks.com/index.html](https://www.cluebenchmarks.com/index.html)
