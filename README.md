@@ -39,3 +39,5 @@ BERT轻量化探索—模型剪枝（BERT Pruning）—Rasa维度剪枝:https://
 中文BERT全词掩蔽预训练（中文BERT-wwm系列模型）[https://github.com/ymcui/Chinese-BERT-wwm](https://github.com/ymcui/Chinese-BERT-wwm)
 
 一个大规模的中文跨领域面向任务的对话数据集:[https://github.com/thu-coai/CrossWOZ](https://github.com/thu-coai/CrossWOZ)
+
+关于ConvLab-2：用于构建、评估和诊断对话系统的开源工具包（支持中文）：[https://github.com/thu-coai/ConvLab-2](https://github.com/thu-coai/ConvLab-2)
