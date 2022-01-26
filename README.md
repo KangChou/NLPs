@@ -31,3 +31,5 @@ BERT轻量化探索—模型剪枝（BERT Pruning）—Rasa维度剪枝:https://
 中文自然语言排行榜及论文查询:[https://www.cluebenchmarks.com/index.html](https://www.cluebenchmarks.com/index.html)
 
 计算语言学国际会议论文集:[https://aclanthology.org/volumes/2020.coling-main/](https://aclanthology.org/volumes/2020.coling-main/)
+
+计算语言学协会第 58 届年会论文集:https://aclanthology.org/volumes/2020.acl-main/
