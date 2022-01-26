@@ -33,3 +33,5 @@ BERT轻量化探索—模型剪枝（BERT Pruning）—Rasa维度剪枝:https://
 计算语言学国际会议论文集:[https://aclanthology.org/volumes/2020.coling-main/](https://aclanthology.org/volumes/2020.coling-main/)
 
 计算语言学协会第 58 届年会论文集:https://aclanthology.org/volumes/2020.acl-main/
+
+计算语言学协会年会 (2021)论文搜集：https://aclanthology.org/events/acl-2021/
