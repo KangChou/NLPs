@@ -2,7 +2,23 @@
 # 文本标注
 
 ## 1、脚本标注
-中文分词、词性标注、实体识别的工具整理；相关数据集整理与预处理；通用评测脚本脚本：https://github.com/Bond-H/lac_tools_benchment
+中文分词、词性标注、实体识别的工具整理；相关数据集整理与预处理；通用评测脚本脚本。
+
+https://github.com/Bond-H/lac_tools_benchment
+
+安装与使用介绍，整理包括以下工具：
+```shell
+LAC
+Jieba
+THULAC
+pkuseg
+pyhanlp
+StandfordNLP
+LTP
+SnowNLP
+PyNLPIR
+foolnltk
+```
 
 ## 2、命名实体识别的三种标注方法
 
