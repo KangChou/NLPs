@@ -4,9 +4,12 @@
 ## 1、脚本标注
 中文分词、词性标注、实体识别的工具整理；相关数据集整理与预处理；通用评测脚本脚本。
 
-https://github.com/Bond-H/lac_tools_benchment
+参考来自：https://github.com/Bond-H/lac_tools_benchment
 
 安装与使用介绍，整理包括以下工具：
+
+https://github.com/Bond-H/lac_tools_benchment/blob/master/lac_tools.md
+
 ```shell
 LAC
 Jieba
