@@ -23,6 +23,8 @@ PyNLPIR
 foolnltk
 ```
 
+案例实现：https://blog.csdn.net/zimiao552147572/article/details/105465131
+
 ## 2、命名实体识别的三种标注方法
 
 1.BMES（四位序列标注法）
