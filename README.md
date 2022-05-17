@@ -47,3 +47,5 @@ BERT轻量化探索—模型剪枝（BERT Pruning）—Rasa维度剪枝:https://
 深度学习和自然语言处理阅读清单:[https://github.com/IsaacChanghau/DL-NLP-Readings](https://github.com/IsaacChanghau/DL-NLP-Readings)
 
 视觉问答 (VQA)（图像/视频问答）、视觉问题生成、视觉对话、视觉常识推理和相关领域的精选列表：[https://github.com/jokieleung/awesome-visual-question-answering](https://github.com/jokieleung/awesome-visual-question-answering)
+
+汇总得不错的nlp学习资料:https://jackkuo666.github.io/ 
