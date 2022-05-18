@@ -98,6 +98,9 @@ for token in doc[:17]:
 
 ![image](https://user-images.githubusercontent.com/36963108/168963178-642d28d3-7ce5-4bc6-a55e-32c39c21a2b9.png)
 
+其他参考：SpaCy中文  https://github.com/howl-anderson/Chinese_models_for_SpaCy 
+
+![image](https://user-images.githubusercontent.com/36963108/168965425-b83914ed-7614-4cad-928b-8ad7e04ca2cf.png)
 
 
 
@@ -125,3 +128,9 @@ TRAIN_DATA = [
 ]
 
 ```
+spacy-zh:https://github.com/middle-plat-ai/spacy_zh_model    https://www.jianshu.com/u/3b77f85cc918
+
+https://github.com/jeusgao/spaCy-new-language-test-Chinese
+
+nlp-base:https://github.com/JackKuo666/Python_nlp_notes
+
