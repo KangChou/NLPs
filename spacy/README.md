@@ -108,3 +108,20 @@ for token in doc[:17]:
 # pip uninstall zh_core_web_trf zh_core_web_sm zh_core_web_md
 # pip install thinc==7.1.1 srsly ujson regex cytoolz spacy==2.2 preshed==3.0.2
 ```
+spaCy V3.0 文本分类模型训练、评估、打包及数据预处理：https://blog.csdn.net/u014607067/article/details/115294589
+
+spaCy的方法进行训练一个新的招投标实体标注模型：https://blog.csdn.net/weixin_45965387/article/details/124140084
+
+实体识别spacy训练模型和更新：https://blog.csdn.net/qq_35385687/article/details/119793624
+
+spacy从头开始训练一个词性标注模型:https://blog.csdn.net/weixin_44711529/article/details/116331270
+```
+TRAIN_DATA = [
+    ("我喜欢红苹果味道", {'tags': ['N', 'V', 'J', 'N','P']}),
+    ("吃蓝色汉堡味道很好", {'tags': ['V', 'J', 'N','P','J']}),
+    ("黄色香蕉味道很甜", {'tags': ['J', 'N', 'P','J']}),
+    ("羊肉肉质味道很好", {'tags': ['N', 'N', 'P','J']}),
+    ("她喜欢闻香水味道", {'tags': ['N', 'N', 'V','N','P']})
+]
+
+```
