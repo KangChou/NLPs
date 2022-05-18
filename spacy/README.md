@@ -118,6 +118,8 @@ spaCy的方法进行训练一个新的招投标实体标注模型：https://blog
 实体识别spacy训练模型和更新：https://blog.csdn.net/qq_35385687/article/details/119793624
 
 spacy从头开始训练一个词性标注模型:https://blog.csdn.net/weixin_44711529/article/details/116331270
+
+spaCy训练一个文本分类模型:https://zhuanlan.zhihu.com/p/359463859
 ```
 TRAIN_DATA = [
     ("我喜欢红苹果味道", {'tags': ['N', 'V', 'J', 'N','P']}),
