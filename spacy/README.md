@@ -54,10 +54,10 @@ Prefix dict has been built successfully.
 ['我', '喜欢', '北京', '的', '秋天', '。']
 
 
-```python
+```
 
 spacy+jieba实现分词：
-```
+```python
 import spacy
 spacy_zh = spacy.load("zh_core_web_sm")
 text = "我喜欢北京的秋天。"
