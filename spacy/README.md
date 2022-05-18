@@ -102,7 +102,11 @@ for token in doc[:17]:
 
 ![image](https://user-images.githubusercontent.com/36963108/168965425-b83914ed-7614-4cad-928b-8ad7e04ca2cf.png)
 
+关于deps和heads的说明： 
 
+![image](https://user-images.githubusercontent.com/36963108/168972779-c69e6a2e-0ed7-4860-ab48-00a315c9840d.png)
+
+https://explosion.ai/demos/displacy
 
 # 参考：补充
 
