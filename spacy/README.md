@@ -108,6 +108,48 @@ for token in doc[:17]:
 
 https://explosion.ai/demos/displacy
 
+
+句法分析可视化：
+
+```python
+# coding:utf-8    
+
+import spacy
+from spacy import displacy
+nlp = spacy.load('zh_core_web_sm')
+doc = nlp('我喜欢北京的秋天。')
+for token in doc:
+  print(token.text,token.dep_,token.head)
+
+# displacy.render(doc,type='dep')
+displacy.serve(doc, style='dep',port=5050) 
+
+```
+
+输出结果：
+
+```
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.444 seconds.
+Prefix dict has been built successfully.
+我 nsubj 喜欢
+喜欢 ROOT 喜欢
+北京 nmod:assmod 秋天
+的 case 北京
+秋天 dobj 喜欢
+。 punct 喜欢
+
+Using the 'dep' visualizer
+Serving on http://0.0.0.0:5050 ...
+
+127.0.0.1 - - [18/May/2022 07:04:05] "GET /?vscodeBrowserReqId=1652857445718 HTTP/1.1" 200 4245
+
+```
+![image](https://user-images.githubusercontent.com/36963108/168978449-3d4d283c-f27f-4f80-95f9-39c496240dcc.png)
+
+
+
 # 参考：补充
 
 安装指定版本：
