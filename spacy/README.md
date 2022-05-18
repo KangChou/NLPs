@@ -189,3 +189,10 @@ Spacy 集成 BERT，XLNET，GPT-2 与Robert:https://zhuanlan.zhihu.com/p/8012533
 自然语言处理包spacy:https://github.com/hidadeng/DaDengAndHisPython/blob/master/20211115spacy%E4%BA%A7%E4%B8%9A%E7%BA%A7%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%8C%85.ipynb
 
 spacy中文在线教程：https://course.spacy.io/zh/
+
+
+spacy句法依存关系:https://spacy.io/usage/linguistic-features#dependency-parse
+
+中文句法分析数据集参考：https://github.com/HIT-SCIR/SemEval-2016 
+
+spacy编码参考： https://spacy.io/api/annotation#section-dependency-parsing
