@@ -52,3 +52,4 @@ if __name__ == '__main__':
     score = parser.evaluate(CTB_TEST)
     print("UAS=%.1f LAS=%.1f\n" % (score[0], score[1]))
     # 参考：https://www.cnblogs.com/qiu-hua/articles/12235764.html
+    # 模型生成路径：/opt/conda/lib/python3.6/site-packages/pyhanlp/data
