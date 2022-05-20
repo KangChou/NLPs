@@ -52,3 +52,25 @@ SpaCy 中文模型:https://github.com/howl-anderson/Chinese_models_for_SpaCy \
 https://blog.csdn.net/lllhhhv/article/details/123335675 \
 zh_core_web_trf、zh_core_web_md 等,它们的区别在于准确度和体积大小, zh_core_web_sm 体积小,准确度相比zh_core_web_trf差,zh_core_web_trf相对就体积大。这样可以适应不同场景.
 
+
+# 数据参考
+hanlp.pretrained.dep。CTB5_BIAFFINE_DEP_ZH= 'https://file.hankcs.com/hanlp/dep/biaffine_ctb5_20191229_025833.zip'
+在 CTB5 上训练的Biaffine LSTM 模型（Dozat & Manning 2017）。
+
+hanlp.pretrained.dep。CTB7_BIAFFINE_DEP_ZH= 'https://file.hankcs.com/hanlp/dep/biaffine_ctb7_20200109_022431.zip'
+在 CTB7 上训练的Biaffine LSTM 模型（Dozat & Manning 2017）。
+
+hanlp.pretrained.dep。CTB9_DEP_ELECTRA_SMALL= 'https://file.hankcs.com/hanlp/dep/ctb9_dep_electra_small_20220216_100306.zip'
+Electra 小型编码器 ( Clark et al. 2020 ) 和 Biaffine 解码器 ( Dozat & Manning 2017 ) 在 CTB9-SD330 上训练。性能为 UAS=87.68% LAS=83.54%。
+
+hanlp.pretrained.dep。CTB9_UDC_ELECTRA_SMALL= 'https://file.hankcs.com/hanlp/dep/udc_dep_electra_small_20220218_095452.zip'
+Electra 小型编码器 ( Clark et al. 2020 ) 和 Biaffine 解码器 ( Dozat & Manning 2017 ) 在 CTB9-UD420 上训练。性能是 UAS=85.92% LAS=81.13% 。
+
+hanlp.pretrained.dep。PMT1_DEP_ELECTRA_SMALL= 'https://file.hankcs.com/hanlp/dep/pmt_dep_electra_small_20220218_134518.zip'
+Electra 小型编码器 ( Clark et al. 2020 ) 和 Biaffine 解码器 ( Dozat & Manning 2017 ) 在 PKU Multi-view Chinese Treebank (PMT) 1.0 ( Qiu et al. 2014 ) 上训练。性能是 UAS=91.21% LAS=88.65%。
+
+hanlp.pretrained.dep。PTB_BIAFFINE_DEP_EN= 'https://file.hankcs.com/hanlp/dep/ptb_dep_biaffine_20200101_174624.zip'
+在 PTB 上训练的Biaffine LSTM 模型（Dozat & Manning 2017 ）。
+
+参考来自：https://hanlp.hankcs.com/docs/api/hanlp/index.html
+
