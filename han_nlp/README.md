@@ -1,4 +1,9 @@
-# 句法
+# pyhanlp句法训练
+
+![image](https://user-images.githubusercontent.com/36963108/169463356-d2faf6c3-557d-49f4-83d7-235ec657c5b3.png)
+
+
+# spacy句法
 
 句法是指句子的各个组成部分的相互关系，句法分析分为句法结构分析（syntactic structure parsing）和依存关系分析(dependency parsing)。句法结构分析用于获取整个句子的句法结构，依存分析用于获取词汇之间的依存关系，目前的句法分析已经从句法结构分析转向依存句法分析。
 
