@@ -76,4 +76,4 @@ hanlp.pretrained.dep。PTB_BIAFFINE_DEP_EN= 'https://file.hankcs.com/hanlp/dep/p
 
 
 # ctb数据集相关论文
-[DPCN/dataset_description.json](https://github.com/textflint/textflint.github.io/blob/b387b412642bdaf61fc49173a4e6077c8a0d372a/Tasks/DPCN/dataset_description.json)
+[DPCN/dataset_paper.json](https://github.com/textflint/textflint.github.io/blob/b387b412642bdaf61fc49173a4e6077c8a0d372a/Tasks/DPCN/paper_list.json)
