@@ -74,3 +74,6 @@ hanlp.pretrained.dep。PTB_BIAFFINE_DEP_EN= 'https://file.hankcs.com/hanlp/dep/p
 
 参考来自：https://hanlp.hankcs.com/docs/api/hanlp/index.html
 
+
+# ctb数据集相关论文
+[DPCN/dataset_description.json](https://github.com/textflint/textflint.github.io/blob/b387b412642bdaf61fc49173a4e6077c8a0d372a/Tasks/DPCN/dataset_description.json)
