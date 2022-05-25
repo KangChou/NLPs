@@ -37,3 +37,21 @@
 * [Dianping, JD Full, JD Binary, Ifeng, ChinaNews, Fudan](https://drive.google.com/open?id=1Es8c9xwAjgXDBtbqMigrQ5nAFMNH0GLE)
 
 参考来自：https://github.com/ShannonAI/glyce/blob/master/docs/dataset_download.md
+
+
+
+
+
+# 命令下载
+```
+wget http://file.hankcs.com/corpus/ctb6_cws.zip
+# wget http://file.hankcs.com/corpus/ctb6_cws.zip#train.txt
+# wget http://file.hankcs.com/corpus/ctb6_cws.zip#dev.tx
+# wget http://file.hankcs.com/corpus/ctb6_cws.zip#test.tx
+unzip ctb6_cws.zip
+```
+
+
+使用的模型：https://github.com/SVAIGBA/WMSeg
+
+参考来自：https://github.com/emorynlp/iwpt-shared-task-2020/blob/6f5cb5785f69dcbd56802cc22e1f74f3cfee7872/edparser/datasets/cws/ctb.py
