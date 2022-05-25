@@ -55,3 +55,9 @@ unzip ctb6_cws.zip
 使用的模型：https://github.com/SVAIGBA/WMSeg
 
 参考来自：https://github.com/emorynlp/iwpt-shared-task-2020/blob/6f5cb5785f69dcbd56802cc22e1f74f3cfee7872/edparser/datasets/cws/ctb.py
+
+# 分词模型
+
+分词工具：https://github.com/SVAIGBA/WMSeg
+
+分词及词性标注工具：https://github.com/SVAIGBA/TwASP
