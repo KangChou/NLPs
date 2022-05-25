@@ -1,5 +1,15 @@
+
+
 # NLPs
 Deep learning speech learning library
+
+
+
+# 数据集
+
+中文、英文NER、英汉机器翻译数据集。中英文实体识别数据集，中英文机器翻译数据集，中文分词数据集：https://github.com/quincyliang/nlp-public-dataset
+
+# 资料汇总
 
 一个轻量级、简单易用的 RNN 唤醒词监听器: [https://github.com/MycroftAI/mycroft-precise](https://github.com/MycroftAI/mycroft-precise)
 
