@@ -20,6 +20,9 @@ ck: https://help.aliyun.com/document_detail/179146.html?scm=20140722.184.2.173
 
 标注标签说明：https://verbs.colorado.edu/chinese/segguide.3rd.ch.pdf
 
+https://blog.csdn.net/qq_40332976/article/details/120331450
+
+
 # 资料汇总
 
 一个轻量级、简单易用的 RNN 唤醒词监听器: [https://github.com/MycroftAI/mycroft-precise](https://github.com/MycroftAI/mycroft-precise)
