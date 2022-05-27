@@ -14,6 +14,9 @@ CTB词性标注集
 
 ![image](https://user-images.githubusercontent.com/36963108/170655243-6267fbc4-246d-40f0-8303-7c97a934918a.png)
 
+![image](https://user-images.githubusercontent.com/36963108/170656452-738fbb77-03bc-4315-a3fb-d14a50a9b5f6.png)
+
+ck: https://help.aliyun.com/document_detail/179146.html?scm=20140722.184.2.173
 
 # 资料汇总
 
