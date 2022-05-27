@@ -5,9 +5,15 @@ Deep learning speech learning library
 
 
 
+
 # 数据集
 
 中文、英文NER、英汉机器翻译数据集。中英文实体识别数据集，中英文机器翻译数据集，中文分词数据集：https://github.com/quincyliang/nlp-public-dataset
+
+CTB词性标注集
+
+![image](https://user-images.githubusercontent.com/36963108/170655243-6267fbc4-246d-40f0-8303-7c97a934918a.png)
+
 
 # 资料汇总
 
