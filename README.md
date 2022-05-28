@@ -85,7 +85,7 @@ from tests.test_utility import ensure_data
 
 IClassifier = JClass('com.hankcs.hanlp.classification.classifiers.IClassifier')
 NaiveBayesClassifier = JClass('com.hankcs.hanlp.classification.classifiers.NaiveBayesClassifier')
-# 中文情感挖掘语料-ChnSentiCorp 谭松波
+# 中文情感挖掘语料-ChnSentiCorp 数据来自：
 chn_senti_corp = ensure_data("ChnSentiCorp情感分析酒店评论", "http://file.hankcs.com/corpus/ChnSentiCorp.zip")
 
 
