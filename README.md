@@ -77,3 +77,30 @@ BERT轻量化探索—模型剪枝（BERT Pruning）—Rasa维度剪枝:https://
 dl4nlp自然语言处理深度学习课程材料:https://github.com/liu-nlp/dl4nlp
 
 HanLP的Python接口，支持自动下载与升级HanLP，兼容py2、py3。内部算法经过工业界和学术界考验，配套书籍《自然语言处理入门》已经出版，欢迎查阅随书代码:https://github.com/jiajunhua/hankcs-pyhanlp/tree/3fc9c7d8a3f5eae00988db743c44b7708520b5f1
+
+# pyhanlp文本训练与预测API接口
+```python
+from pyhanlp import *
+from tests.test_utility import ensure_data
+
+IClassifier = JClass('com.hankcs.hanlp.classification.classifiers.IClassifier')
+NaiveBayesClassifier = JClass('com.hankcs.hanlp.classification.classifiers.NaiveBayesClassifier')
+# 中文情感挖掘语料-ChnSentiCorp 谭松波
+chn_senti_corp = ensure_data("ChnSentiCorp情感分析酒店评论", "http://file.hankcs.com/corpus/ChnSentiCorp.zip")
+
+
+def predict(classifier, text):
+    print("《%s》 情感极性是 【%s】" % (text, classifier.classify(text)))
+
+
+if __name__ == '__main__':
+    classifier = NaiveBayesClassifier()
+    #  创建分类器，更高级的功能请参考IClassifier的接口定义
+    classifier.train(chn_senti_corp)
+    #  训练后的模型支持持久化，下次就不必训练了
+    predict(classifier, "前台客房服务态度非常好！早餐很丰富，房价很干净。再接再厉！")
+    predict(classifier, "结果大失所望，灯光昏暗，空间极其狭小，床垫质量恶劣，房间还伴着一股霉味。")
+    predict(classifier, "可利用文本分类实现情感分析，效果不是不行")
+
+```
+
