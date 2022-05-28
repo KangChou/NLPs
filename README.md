@@ -75,3 +75,5 @@ BERT轻量化探索—模型剪枝（BERT Pruning）—Rasa维度剪枝:https://
 汇总得不错的nlp学习资料:https://jackkuo666.github.io/ 
 
 dl4nlp自然语言处理深度学习课程材料:https://github.com/liu-nlp/dl4nlp
+
+HanLP的Python接口，支持自动下载与升级HanLP，兼容py2、py3。内部算法经过工业界和学术界考验，配套书籍《自然语言处理入门》已经出版，欢迎查阅随书代码:https://github.com/jiajunhua/hankcs-pyhanlp/tree/3fc9c7d8a3f5eae00988db743c44b7708520b5f1
