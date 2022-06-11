@@ -35,4 +35,5 @@ https://github.com/DA1YAYUAN/JD-comments-sentiment-analysis
 https://github.com/renjunxiang/Text-Classification
 https://www.cnblogs.com/jclian91/p/10886031.html
 https://www.mscto.com/q/129589514267000832
+CNN卷积神经网络实现文本分类:https://github.com/renjunxiang/Text-Classification
 ```
