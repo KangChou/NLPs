@@ -4,7 +4,13 @@
 情感极性（倾向）分析。所谓情感极性分析，指的是对文本进行褒义、贬义、中性的判断。在大多应用场景下，只分为两类。
 例如对于“喜爱”和“厌恶”这两个词，就属于不同的情感倾向。
 
+
+![image](https://user-images.githubusercontent.com/36963108/173188980-ac618f90-6146-4419-ae08-9152aa28f66c.png)
+
+
+
 TextClassification/data/data_single.csv 该数据集一共有4310条评论数据，文本的情感分为两类：“正面”和“反面”
+
 
 数据集的前几行如下：
 ```buildoutcfg
@@ -16,7 +22,11 @@ evaluation,label
 ```
 ![image](https://user-images.githubusercontent.com/36963108/173188724-b8c5b456-9c56-4f5e-a56b-a28e2681ef4b.png)
 
-
+```buildoutcfg
+# 设置matplotlib绘图时的字体
+my_font = font_manager.FontProperties(fname="./Songti.ttc")
+Songti.ttc字体库下载地址：https://drive.google.com/drive/folders/1iZqrFBJPGkpCIFsVuQwcmAdqBZGdOZnB
+```
 # References:
 
 ```buildoutcfg
