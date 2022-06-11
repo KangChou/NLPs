@@ -14,4 +14,14 @@ evaluation,label
 电视比想象中的大好多，画面也很清晰，系统很智能，更多功能还在摸索中,正面
 不错,正面
 ```
-ck: https://github.com/renjunxiang/Text-Classification
+![image](https://user-images.githubusercontent.com/36963108/173188724-b8c5b456-9c56-4f5e-a56b-a28e2681ef4b.png)
+
+
+# References:
+
+```buildoutcfg
+https://github.com/DA1YAYUAN/JD-comments-sentiment-analysis
+https://github.com/renjunxiang/Text-Classification
+https://www.cnblogs.com/jclian91/p/10886031.html
+https://www.mscto.com/q/129589514267000832
+```
