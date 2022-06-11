@@ -1,4 +1,4 @@
-# lstm文本情感分析
+# TensorFlow2：Embedding + LSTM + Softmax文本情感分析
 （Sentiment Analysis）
 
 情感极性（倾向）分析。所谓情感极性分析，指的是对文本进行褒义、贬义、中性的判断。在大多应用场景下，只分为两类。
