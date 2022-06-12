@@ -31,7 +31,7 @@ def load_data(filepath, input_shape=20):
 
     vocabulary = set(string)
 
-    # 字典列表
+    # 字典列表 参考：https://blog.csdn.net/weixin_43495111/article/details/104655946
     word_dictionary = {word: i+1 for i, word in enumerate(vocabulary)}
     with open('models/word_dict.pk', 'wb') as f:
         pickle.dump(word_dictionary, f)
