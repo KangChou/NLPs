@@ -1,0 +1,712 @@
+2.6.2
+数据总量: 62774 .
+总共有多少个类目：    cat
+0   书籍
+1   平板
+2   手机
+3   水果
+4  洗发水
+5  热水器
+6   蒙牛
+7   衣服
+8  计算机
+9   酒店
+---------各个类目的数据量以及占比-------------
+平板     10000
+酒店     10000
+衣服     10000
+洗发水    10000
+水果     10000
+计算机     3992
+书籍      3851
+手机      2323
+蒙牛      2033
+热水器      575
+Name: cat, dtype: int64
+平板     0.159302
+酒店     0.159302
+衣服     0.159302
+洗发水    0.159302
+水果     0.159302
+计算机    0.063593
+书籍     0.061347
+手机     0.037006
+蒙牛     0.032386
+热水器    0.009160
+Name: cat, dtype: float64
+[['昨天中午下的单，今天中午到的货。拿到快递的时候宿舍的人都在惊讶居然是这么大的盒子！打开之后发现赠品一个不落，包装也很严谨，应该是正品的。拿出平板的时候觉得它长度还行，就是有点窄，外观上特别像放大了的手机，不过拿起来一点也不重。再说说产品性能吧，我不太了解具体的参数，只觉得立体音效确实很棒，但是像素确实比不上手机，不管是照相还是一些游戏都没有手机清晰。最后，我一定要提一下京东赠送的保护套，这个套子的背面居然是一整面的塑料壳，根本没办法做支撑，这一点也是醉了，我只好赶快另买新的保护套。这是我的第一个平板电脑，我选择了华为的这款，没办法跟其他平板做对比，总的来说体验还不错，这么便宜的平板性价比已经很好了。']
+ ['还行 玩下游戏看下视频日常够用了']
+ ['在京东买了两台x2了，这台是朋友要买的。第一台屏幕有亮斑，前几天去保修，结果华为售后说我机身是弯曲的不给保修。然而我百度了一下，发现网上很多人都是这种情况。这说明这手机本身的设计就有问题。售后还不给保修，差评给华为的。']
+ ['不愧是二手东，手机背面一个小坑，真怀疑是被退回去的']
+ ['用着一般，分辨率太低了']]
+停用词: ['、', '。', '〈', '〉', '《', '》', '一', '一个', '一些', '一何', '一切', '一则', '一方面', '一旦', '一来', '一样', '一种', '一般', '一转眼', '七', '万一', '三', '上', '上下', '下', '不', '不仅', '不但', '不光', '不单', '不只', '不外乎', '不如', '不妨', '不尽', '不尽然', '不得', '不怕', '不惟', '不成', '不拘', '不料', '不是', '不比', '不然', '不特', '不独', '不管', '不至于', '不若', '不论', '不过', '不问', '与', '与其', '与其说', '与否', '与此同时', '且', '且不说', '且说', '两者', '个', '个别', '中', '临', '为', '为了', '为什么', '为何', '为止', '为此', '为着', '乃', '乃至', '乃至于', '么', '之', '之一', '之所以', '之类', '乌乎', '乎', '乘', '九', '也', '也好', '也罢', '了', '二', '二来', '于', '于是', '于是乎', '云云', '云尔', '五', '些', '亦', '人', '人们', '人家', '什', '什么', '什么样', '今', '介于', '仍', '仍旧', '从', '从此', '从而', '他', '他人', '他们', '他们们', '以', '以上', '以为', '以便', '以免', '以及', '以故', '以期', '以来', '以至', '以至于', '以致', '们', '任', '任何', '任凭', '会', '似的', '但', '但凡', '但是', '何', '何以', '何况', '何处', '何时', '余外', '作为', '你', '你们', '使', '使得', '例如', '依', '依据', '依照', '便于', '俺', '俺们', '倘', '倘使', '倘或', '倘然', '倘若', '借', '借傥然', '假使', '假如', '假若', '做', '像', '儿', '先不先', '光', '光是', '全体', '全部', '八', '六', '兮', '共', '关于', '关于具体地说', '其', '其一', '其中', '其二', '其他', '其余', '其它', '其次', '具体地说', '具体说来', '兼之', '内', '再', '再其次', '再则', '再有', '再者', '再者说', '再说', '冒', '冲', '况且', '几', '几时', '凡', '凡是', '凭', '凭借', '出于', '出来', '分', '分别', '则', '则甚', '别', '别人', '别处', '别是', '别的', '别管', '别说', '到', '前后', '前此', '前者', '加之', '加以', '区', '即', '即令', '即使', '即便', '即如', '即或', '即若', '却', '去', '又', '又及', '及', '及其', '及至', '反之', '反而', '反过来', '反过来说', '受到', '另', '另一方面', '另外', '另悉', '只', '只当', '只怕', '只是', '只有', '只消', '只要', '只限', '叫', '叮咚', '可', '可以', '可是', '可见', '各', '各个', '各位', '各种', '各自', '同', '同时', '后', '后者', '向', '向使', '向着', '吓', '吗', '否则', '吧', '吧哒', '含', '吱', '呀', '呃', '呕', '呗', '呜', '呜呼', '呢', '呵', '呵呵', '呸', '呼哧', '咋', '和', '咚', '咦', '咧', '咱', '咱们', '咳', '哇', '哈', '哈哈', '哉', '哎', '哎呀', '哎哟', '哗', '哟', '哦', '哩', '哪', '哪个', '哪些', '哪儿', '哪天', '哪年', '哪怕', '哪样', '哪边', '哪里', '哼', '哼唷', '唉', '唯有', '啊', '啐', '啥', '啦', '啪达', '啷当', '喂', '喏', '喔唷', '喽', '嗡', '嗡嗡', '嗬', '嗯', '嗳', '嘎', '嘎登', '嘘', '嘛', '嘻', '嘿', '嘿嘿', '四', '因', '因为', '因了', '因此', '因着', '因而', '固然', '在', '在下', '在于', '地', '基于', '处在', '多', '多么', '多少', '大', '大家', '她', '她们', '好', '如', '如上', '如上所述', '如下', '如何', '如其', '如同', '如是', '如果', '如此', '如若', '始而', '孰料', '孰知', '宁', '宁可', '宁愿', '宁肯', '它', '它们', '对', '对于', '对待', '对方', '对比', '将', '小', '尔', '尔后', '尔尔', '尚且', '就', '就是', '就是了', '就是说', '就算', '就要', '尽', '尽管', '尽管如此', '岂但', '己', '已', '已矣', '巴', '巴巴', '年', '并', '并且', '庶乎', '庶几', '开外', '开始', '归', '归齐', '当', '当地', '当然', '当着', '彼', '彼时', '彼此', '往', '待', '很', '得', '得了', '怎', '怎么', '怎么办', '怎么样', '怎奈', '怎样', '总之', '总的来看', '总的来说', '总的说来', '总而言之', '恰恰相反', '您', '惟其', '慢说', '我', '我们', '或', '或则', '或是', '或曰', '或者', '截至', '所', '所以', '所在', '所幸', '所有', '才', '才能', '打', '打从', '把', '抑或', '拿', '按', '按照', '换句话说', '换言之', '据', '据此', '接着', '故', '故此', '故而', '旁人', '无', '无宁', '无论', '既', '既往', '既是', '既然', '日', '时', '时候', '是', '是以', '是的', '更', '曾', '替', '替代', '最', '月', '有', '有些', '有关', '有及', '有时', '有的', '望', '朝', '朝着', '本', '本人', '本地', '本着', '本身', '来', '来着', '来自', '来说', '极了', '果然', '果真', '某', '某个', '某些', '某某', '根据', '欤', '正值', '正如', '正巧', '正是', '此', '此地', '此处', '此外', '此时', '此次', '此间', '毋宁', '每', '每当', '比', '比及', '比如', '比方', '没奈何', '沿', '沿着', '漫说', '点', '焉', '然则', '然后', '然而', '照', '照着', '犹且', '犹自', '甚且', '甚么', '甚或', '甚而', '甚至', '甚至于', '用', '用来', '由', '由于', '由是', '由此', '由此可见', '的', '的确', '的话', '直到', '相对而言', '省得', '看', '眨眼', '着', '着呢', '矣', '矣乎', '矣哉', '离', '秒', '称', '竟而', '第', '等', '等到', '等等', '简言之', '管', '类如', '紧接着', '纵', '纵令', '纵使', '纵然', '经', '经过', '结果', '给', '继之', '继后', '继而', '综上所述', '罢了', '者', '而', '而且', '而况', '而后', '而外', '而已', '而是', '而言', '能', '能否', '腾', '自', '自个儿', '自从', '自各儿', '自后', '自家', '自己', '自打', '自身', '至', '至于', '至今', '至若', '致', '般的', '若', '若夫', '若是', '若果', '若非', '莫不然', '莫如', '莫若', '虽', '虽则', '虽然', '虽说', '被', '要', '要不', '要不是', '要不然', '要么', '要是', '譬喻', '譬如', '让', '许多', '论', '设使', '设或', '设若', '诚如', '诚然', '该', '说', '说来', '请', '诸', '诸位', '诸如', '谁', '谁人', '谁料', '谁知', '贼死', '赖以', '赶', '起', '起见', '趁', '趁着', '越是', '距', '跟', '较', '较之', '边', '过', '还', '还是', '还有', '还要', '这', '这一来', '这个', '这么', '这么些', '这么样', '这么点儿', '这些', '这会儿', '这儿', '这就是说', '这时', '这样', '这次', '这般', '这边', '这里', '进而', '连', '连同', '逐步', '通过', '遵循', '遵照', '那', '那个', '那么', '那么些', '那么样', '那些', '那会儿', '那儿', '那时', '那样', '那般', '那边', '那里', '都', '鄙人', '鉴于', '针对', '阿', '除', '除了', '除外', '除开', '除此之外', '除非', '随', '随后', '随时', '随着', '难道说', '零', '非', '非但', '非徒', '非特', '非独', '靠', '顺', '顺着', '首先', '︿', '！', '＃', '＄', '％', '＆', '（', '）', '＊', '＋', '，', '０', '１', '２', '３', '４', '５', '６', '７', '８', '９', '：', '；', '＜', '＞', '？', '＠', '［', '］', '｛', '｜', '｝', '～', '￥']Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.693 seconds.
+Prefix dict has been built successfully.
+2022-06-12 07:04:36.358049: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-12 07:04:36.414521: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-12 07:04:36.415710: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-12 07:04:36.417219: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-12 07:04:36.419611: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-12 07:04:36.420877: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-12 07:04:36.421922: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-12 07:04:36.753515: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-12 07:04:36.753796: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-12 07:04:36.754028: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-12 07:04:36.754244: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 2378 MB memory:  -> device: 0, name: GeForce GTX 1650 Ti, pci bus id: 0000:01:00.0, compute capability: 7.5
+2022-06-12 07:04:37.222315: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-06-12 07:04:39.246746: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8101
+
+       cat  ...                                       clean_review
+21912   水果  ...                                   差评放了半个月没去物业拿烂了两个
+29894  洗发水  ...                                看起来不错希望是正品哦会一直关注你们的
+25611   水果  ...          水果不行啊实在是失望至少要好吃点吧和水果店比都没有一点优点以后不会在这里买水果类了
+31146  洗发水  ...                               一直在用这次活动比平时要便宜挺不错的满意
+58943   酒店  ...  首先酒店不好找说是吴中路其实应该是在在万源路上其次房间给人感觉不是很干净墙面上的墙纸有点掉下...
+9024    平板  ...                                           第三方发货太慢了
+17204   水果  ...                                苹果虽然小但口感清脆儿童吃再合适不过了
+41500   衣服  ...                        裤子跟图片基本一样摸着很舒服没有异味是一次很满意的购物
+4161    平板  ...                                    荣耀平板电脑不错国产品牌就是好
+3282    书籍  ...                  看到推荐的很好就买了宝宝好像不喜欢连看也不看就扔到沙发后面了郁闷阿
+
+[10 rows x 4 columns]
+处理结果:       cat  ...                                         cut_review
+0      书籍  ...  父母 一定 刘墉 心态 不断 学习 不断 进步 不断 补充 新鲜血液 保持 一颗 年轻 心 ...
+1      书籍  ...  作者 真有 英国人 严谨 风格 提出 观点 进行 论述 论证 物理学 了解 不深 仍然 感受...
+2      书籍  ...  作者 长篇大论 借用 详细 报告 数据处理 工作 计算结果 支持 其新 观点 荷兰 曾经 县...
+3      书籍  ...  作者 战 之前 拥抱 令人 叫绝 日本 没有 战败 美军 占领 没胡 官僚主义 延续 没有 ...
+4      书籍  ...  作者 少年 时即 喜 阅读 看出 精读 无数 经典 庞大 内心世界 作品 难能可贵 两点 一...
+...    ..  ...                                                ...
+62769  酒店  ...  盐城 最低气温 4 度 晚上 冷得 要死 居然 不开 空调 投诉 酒店客房 部 得到 答复 ...
+62770  酒店  ...  房间 很小 整体 设施 老化 四星 差距 很大 毛巾 太 破旧 早餐 简陋 房间 隔音 很差...
+62771  酒店  ...                                 感觉 不行 性价比 很差 知道 银川
+62772  酒店  ...  房间 时间 长 进去 有点 异味 服务员 是不是 不够 一楼 找 半个 小时 找到 房间 想...
+62773  酒店  ...  老人 小孩 大家族 聚会 选在 吴宫 泛太平洋 新加坡 品牌 一定 不错 没想到 11 30...
+
+[62774 rows x 5 columns]
+50219
+12555
+平板     0.159302
+酒店     0.159302
+衣服     0.159302
+洗发水    0.159302
+水果     0.159302
+计算机    0.063601
+书籍     0.061351
+手机     0.036998
+蒙牛     0.032378
+热水器    0.009160
+Name: cat, dtype: float64
+洗发水    0.159299
+平板     0.159299
+水果     0.159299
+酒店     0.159299
+衣服     0.159299
+计算机    0.063560
+书籍     0.061330
+手机     0.037037
+蒙牛     0.032417
+热水器    0.009160
+Name: cat, dtype: float64
+62168
+[('<OOV>', 1), ('买', 2), ('不错', 3), ('没有', 4), ('酒店', 5), ('京东', 6), ('房间', 7), ('非常', 8), ('感觉', 9), ('没', 10)]
+质量 不错 赠品 没有 赠 完 写 上面 没有 提交 订单 显示 收到 货 没 礼品 赠 完
+[  12    3  205    4 2400  121  198  409    4 2567  349  216   28  131
+   10 2065 2400  121    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0]
+104 -> 元
+3 -> 不错
+120 -> 洗发水
+贴身 -> 7131
+1 -> <OOV>
+{'平板': 1, '水果': 2, '洗发水': 3, '衣服': 4, '酒店': 5, '计算机': 6, '书籍': 7, '手机': 8, '蒙牛': 9, '热水器': 10}
+(50219, 1)
+[2]
+[9]
+[3]
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding (Embedding)        (None, None, 64)          320000    
+_________________________________________________________________
+bidirectional (Bidirectional (None, 128)               66048     
+_________________________________________________________________
+dense (Dense)                (None, 64)                8256      
+_________________________________________________________________
+dense_1 (Dense)              (None, 11)                715       
+=================================================================
+Total params: 395,019
+Trainable params: 395,019
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/10
+1570/1570 - 23s - loss: 0.6534 - accuracy: 0.7734 - val_loss: 0.4010 - val_accuracy: 0.8651
+Epoch 2/10
+1570/1570 - 18s - loss: 0.3124 - accuracy: 0.8929 - val_loss: 0.3558 - val_accuracy: 0.8801
+Epoch 3/10
+1570/1570 - 18s - loss: 0.2498 - accuracy: 0.9122 - val_loss: 0.3567 - val_accuracy: 0.8789
+Epoch 4/10
+1570/1570 - 18s - loss: 0.2193 - accuracy: 0.9215 - val_loss: 0.3727 - val_accuracy: 0.8793
+Epoch 5/10
+1570/1570 - 18s - loss: 0.1959 - accuracy: 0.9300 - val_loss: 0.3942 - val_accuracy: 0.8760
+Epoch 6/10
+1570/1570 - 18s - loss: 0.1807 - accuracy: 0.9341 - val_loss: 0.4073 - val_accuracy: 0.8738
+Epoch 7/10
+1570/1570 - 18s - loss: 0.1610 - accuracy: 0.9413 - val_loss: 0.4204 - val_accuracy: 0.8770
+Epoch 8/10
+1570/1570 - 18s - loss: 0.1454 - accuracy: 0.9459 - val_loss: 0.4389 - val_accuracy: 0.8775
+Epoch 9/10
+1570/1570 - 18s - loss: 0.1347 - accuracy: 0.9509 - val_loss: 0.4658 - val_accuracy: 0.8765
+Epoch 10/10
+1570/1570 - 18s - loss: 0.1241 - accuracy: 0.9550 - val_loss: 0.5072 - val_accuracy: 0.8743
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms" ...
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqeglfs.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqeglfs.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "eglfs"
+        ]
+    },
+    "archreq": 0,
+    "className": "QEglFSIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("eglfs")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqlinuxfb.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqlinuxfb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "linuxfb"
+        ]
+    },
+    "archreq": 0,
+    "className": "QLinuxFbIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("linuxfb")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqminimal.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqminimal.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimal"
+        ]
+    },
+    "archreq": 0,
+    "className": "QMinimalIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("minimal")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqminimalegl.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqminimalegl.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimalegl"
+        ]
+    },
+    "archreq": 0,
+    "className": "QMinimalEglIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("minimalegl")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqoffscreen.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqoffscreen.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "offscreen"
+        ]
+    },
+    "archreq": 0,
+    "className": "QOffscreenIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("offscreen")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqvnc.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqvnc.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vnc"
+        ]
+    },
+    "archreq": 0,
+    "className": "QVncIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("vnc")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqwayland-egl.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqwayland-egl.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "wayland-egl"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWaylandEglPlatformIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("wayland-egl")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqwayland-generic.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqwayland-generic.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "wayland"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWaylandIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("wayland")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqwayland-xcomposite-egl.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqwayland-xcomposite-egl.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "wayland-xcomposite-egl"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWaylandXCompositeEglPlatformIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("wayland-xcomposite-egl")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqwayland-xcomposite-glx.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqwayland-xcomposite-glx.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "wayland-xcomposite-glx"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWaylandXCompositeGlxPlatformIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("wayland-xcomposite-glx")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqwebgl.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqwebgl.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "webgl"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWebGLIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("webgl")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqxcb.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqxcb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "xcb"
+        ]
+    },
+    "archreq": 0,
+    "className": "QXcbIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("xcb")
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/bin/platforms" ...
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqxcb.so"
+loaded library "Xcursor"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platformthemes" ...
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platformthemes/libqgtk3.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platformthemes/libqgtk3.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformThemeFactoryInterface.5.1",
+    "MetaData": {
+        "Keys": [
+            "gtk3"
+        ]
+    },
+    "archreq": 0,
+    "className": "QGtk3ThemePlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("gtk3")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platformthemes/libqxdgdesktopportal.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platformthemes/libqxdgdesktopportal.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformThemeFactoryInterface.5.1",
+    "MetaData": {
+        "Keys": [
+            "xdgdesktopportal",
+            "flatpak",
+            "snap"
+        ]
+    },
+    "archreq": 0,
+    "className": "QXdgDesktopPortalThemePlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("xdgdesktopportal", "flatpak", "snap")
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/bin/platformthemes" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforminputcontexts" ...
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPlatformInputContextFactoryInterface.5.1",
+    "MetaData": {
+        "Keys": [
+            "compose",
+            "xim"
+        ]
+    },
+    "archreq": 0,
+    "className": "QComposePlatformInputContextPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("compose", "xim")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPlatformInputContextFactoryInterface.5.1",
+    "MetaData": {
+        "Keys": [
+            "ibus"
+        ]
+    },
+    "archreq": 0,
+    "className": "QIbusPlatformInputContextPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("ibus")
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/bin/platforminputcontexts" ...
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so"
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/styles" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/bin/styles" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/iconengines" ...
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/iconengines/libqsvgicon.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/iconengines/libqsvgicon.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QIconEngineFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "svg",
+            "svgz",
+            "svg.gz"
+        ]
+    },
+    "archreq": 0,
+    "className": "QSvgIconPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("svg", "svgz", "svg.gz")
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/bin/iconengines" ...
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/iconengines/libqsvgicon.so"
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats" ...
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqgif.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqgif.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "gif"
+        ],
+        "MimeTypes": [
+            "image/gif"
+        ]
+    },
+    "archreq": 0,
+    "className": "QGifPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("gif")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqicns.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqicns.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "icns"
+        ],
+        "MimeTypes": [
+            "image/x-icns"
+        ]
+    },
+    "archreq": 0,
+    "className": "QICNSPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("icns")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqico.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqico.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "ico",
+            "cur"
+        ],
+        "MimeTypes": [
+            "image/vnd.microsoft.icon",
+            "image/vnd.microsoft.icon"
+        ]
+    },
+    "archreq": 0,
+    "className": "QICOPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("ico", "cur")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqjpeg.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqjpeg.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "jpg",
+            "jpeg"
+        ],
+        "MimeTypes": [
+            "image/jpeg",
+            "image/jpeg"
+        ]
+    },
+    "archreq": 0,
+    "className": "QJpegPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("jpg", "jpeg")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqsvg.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqsvg.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "svg",
+            "svgz"
+        ],
+        "MimeTypes": [
+            "image/svg+xml",
+            "image/svg+xml-compressed"
+        ]
+    },
+    "archreq": 0,
+    "className": "QSvgPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("svg", "svgz")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqtga.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqtga.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "tga"
+        ],
+        "MimeTypes": [
+            "image/x-tga"
+        ]
+    },
+    "archreq": 0,
+    "className": "QTgaPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("tga")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqtiff.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqtiff.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "tiff",
+            "tif"
+        ],
+        "MimeTypes": [
+            "image/tiff",
+            "image/tiff"
+        ]
+    },
+    "archreq": 0,
+    "className": "QTiffPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("tiff", "tif")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqwbmp.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqwbmp.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "wbmp"
+        ],
+        "MimeTypes": [
+            "image/vnd.wap.wbmp"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWbmpPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("wbmp")
+QFactoryLoader::QFactoryLoader() looking at "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqwebp.so"
+Found metadata in lib /opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqwebp.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "webp"
+        ],
+        "MimeTypes": [
+            "image/webp"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWebpPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("webp")
+QFactoryLoader::QFactoryLoader() checking directory path "/opt/conda/bin/imageformats" ...
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqgif.so"
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqicns.so"
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqico.so"
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqjpeg.so"
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqsvg.so"
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqtga.so"
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqtiff.so"
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqwbmp.so"
+loaded library "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqwebp.so"
+{'平板': 1, '水果': 2, '洗发水': 3, '衣服': 4, '酒店': 5, '计算机': 6, '书籍': 7, '手机': 8, '蒙牛': 9, '热水器': 10}
+accuracy 0.8743130227001195
+              precision    recall  f1-score   support
+
+           1       0.82      0.78      0.80      2000
+           2       0.88      0.88      0.88      2000
+           3       0.80      0.82      0.81      2000
+           4       0.85      0.89      0.87      2000
+           5       0.99      0.97      0.98      2000
+           6       0.89      0.92      0.91       798
+           7       0.94      0.92      0.93       770
+           8       0.85      0.83      0.84       465
+           9       1.00      0.99      0.99       407
+          10       0.62      0.57      0.59       115
+
+    accuracy                           0.87     12555
+   macro avg       0.86      0.86      0.86     12555
+weighted avg       0.87      0.87      0.87     12555
+
+{'平板': 1, '水果': 2, '洗发水': 3, '衣服': 4, '酒店': 5, '计算机': 6, '书籍': 7, '手机': 8, '蒙牛': 9, '热水器': 10}
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqgif.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqicns.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqico.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqjpeg.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqsvg.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqtga.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqtiff.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqwbmp.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/imageformats/libqwebp.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/iconengines/libqsvgicon.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so" 
+QLibraryPrivate::unload succeeded on "/opt/conda/lib/python3.6/site-packages/PyQt5/Qt5/plugins/platforms/libqxcb.so" 
+QLibraryPrivate::unload succeeded on "Xcursor" (faked)

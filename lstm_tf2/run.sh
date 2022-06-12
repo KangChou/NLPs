@@ -1,0 +1,1 @@
+export PYTHONIOENCODING=utf-8;python test.py &> run.log
