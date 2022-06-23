@@ -24,9 +24,9 @@ cd DBP15K
 
 
     
-    Note:
-    For the first time, it may take almost 3-4 hours to generate the candiate file.
-    You may also choose to directly download these files from https://drive.google.com/open?id=1dYJtj1_J4nYJdrDY95ucGLCuZXDXI7PL and directly use them to train the model.
+Note:
+For the first time, it may take almost 3-4 hours to generate the candiate file.
+You may also choose to directly download these files from https://drive.google.com/open?id=1dYJtj1_J4nYJdrDY95ucGLCuZXDXI7PL and directly use them to train the model.
     
 (2) Train & Test the model: (take zh_en as an example)
   
