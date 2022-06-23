@@ -1,6 +1,7 @@
 # About this Code
 参考来自： **_Cross-lingual Knowledge Graph Alignment via Graph Matching Neural Network_**.
 
+github: https://github.com/syxu828/Crosslingula-KG-Matching
 # Env Setting
 Python 3.6 (**important!**)\
 Tensorflow 1.15.0\
@@ -10,6 +11,9 @@ argparse\
 codecs
 
 # How To Run The Codes
+
+ DBP15K datasets: https://docs.google.com/uc?export=download&id=1ggYlYf2_kTyi7oF9g07oTNn3VDhjl7so&confirm=t
+
 To train your model, you need:
 
 (1) Generate the training data by using the following command under DBP15K dataset: (take zh_en as an example)
