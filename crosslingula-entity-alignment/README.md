@@ -1,9 +1,9 @@
 # About this Code
-This is the code for our ACL paper entitled **_Cross-lingual Knowledge Graph Alignment via Graph Matching Neural Network_**.
+参考来自： **_Cross-lingual Knowledge Graph Alignment via Graph Matching Neural Network_**.
 
 # Env Setting
-Python 3.5 (**important!**)\
-Tensorflow 1.8.0\
+Python 3.6 (**important!**)\
+Tensorflow 1.15.0\
 scipy\
 tqdm\
 argparse\
@@ -18,6 +18,12 @@ To train your model, you need:
     python3 preprocessor.py zh_en test 1000 # gen the test examples
     python3 preprocessor.py zh_en dev  1000  # gen the dev examples
     
+    cd DBP15K
+    
+    ![image](https://user-images.githubusercontent.com/36963108/175223144-0c3c9a29-7735-4979-8240-439408fb7137.png)
+
+    
+    
     Note:
     For the first time, it may take almost 3-4 hours to generate the candiate file.
     You may also choose to directly download these files from https://drive.google.com/open?id=1dYJtj1_J4nYJdrDY95ucGLCuZXDXI7PL and directly use them to train the model.
@@ -26,6 +32,10 @@ To train your model, you need:
   
     python3 run_model.py train zh_en zh_en_model -epochs=10 -use_pretrained_embedding
     python3 run_model.py test zh_en zh_en_model -use_pretrained_embedding
+    
+    ![image](https://user-images.githubusercontent.com/36963108/175223278-2ad78407-5a22-4be9-903e-fa620e3edd24.png)
+
+    
     
 # How To Cite The Codes
 Please cite our work if you like or are using our codes for your projects!
