@@ -18,11 +18,11 @@ To train your model, you need:
     python3 preprocessor.py zh_en test 1000 # gen the test examples
     python3 preprocessor.py zh_en dev  1000  # gen the dev examples
     
-    cd DBP15K
-    
-    ![image](https://user-images.githubusercontent.com/36963108/175223144-0c3c9a29-7735-4979-8240-439408fb7137.png)
+cd DBP15K
 
-    
+![image](https://user-images.githubusercontent.com/36963108/175223144-0c3c9a29-7735-4979-8240-439408fb7137.png)
+
+
     
     Note:
     For the first time, it may take almost 3-4 hours to generate the candiate file.
@@ -33,7 +33,7 @@ To train your model, you need:
     python3 run_model.py train zh_en zh_en_model -epochs=10 -use_pretrained_embedding
     python3 run_model.py test zh_en zh_en_model -use_pretrained_embedding
     
-    ![image](https://user-images.githubusercontent.com/36963108/175223278-2ad78407-5a22-4be9-903e-fa620e3edd24.png)
+![image](https://user-images.githubusercontent.com/36963108/175223278-2ad78407-5a22-4be9-903e-fa620e3edd24.png)
 
     
     
