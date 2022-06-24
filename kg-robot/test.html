@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>.link {  fill: none;  stroke: #666;  stroke-width: 1.5px;}#licensing {  fill: green;}.link.licensing {  stroke: green;}.link.resolved {  stroke-dasharray: 0,2 1;}circle {  fill: #ccc;  stroke: #333;  stroke-width: 1.5px;}text {  font: 12px Microsoft YaHei;  pointer-events: none;  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;}.linetext {    font-size: 12px Microsoft YaHei;}</style>
+<body>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var links = [{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '刘德华', type: 'resolved', 'rela': '中文名'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: 'AndyLau、LauTakWah', type: 'resolved', 'rela': '外文名'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '华仔', type: 'resolved', 'rela': '别名'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '华Dee', type: 'resolved', 'rela': '别名'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '华哥', type: 'resolved', 'rela': '别名'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '中国', type: 'resolved', 'rela': '国籍'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '汉族', type: 'resolved', 'rela': '民族'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '中国香港新界大埔镇泰亨村', type: 'resolved', 'rela': '出生地'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '1961年9月27日', type: 'resolved', 'rela': '出生日期'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天秤座', type: 'resolved', 'rela': '星座'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: 'AB型', type: 'resolved', 'rela': '血型'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '174cm', type: 'resolved', 'rela': '身高'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '63kg', type: 'resolved', 'rela': '体重'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '可立中学、第十期无线艺员训练班', type: 'resolved', 'rela': '毕业院校'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '演员', type: 'resolved', 'rela': '职业'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '歌手', type: 'resolved', 'rela': '职业'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '制片', type: 'resolved', 'rela': '职业'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '作词人', type: 'resolved', 'rela': '职业'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '东亚唱片', type: 'resolved', 'rela': '经纪公司'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '映艺娱乐', type: 'resolved', 'rela': '经纪公司'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '无间道', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天若有情', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天下无贼', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '旺角卡门', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '暗战', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '阿虎', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '十面埋伏', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '大块头有大智慧', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '来生缘', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '忘情水', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '谢谢你的爱', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '冰雨', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '练习', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '笨小孩', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '男人哭吧不是罪', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '17岁', type: 'resolved', 'rela': '代表作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '三届香港电影金像奖最佳男主角奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '两届台湾电影金马奖最佳男主角奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '第16届中国电影华表奖优秀男演员奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '第27届香港电影金像奖最佳男配角奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '第4届华语电影传媒大奖最佳男演员奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '第11届釜山国际电影节亚洲年度电影人奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '第7届华语电影传媒大奖百家传媒年度致敬电影人奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '第3届华语电影传媒大奖观众票选最受瞩目男演员奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '1985-2005年全港最高累积票房香港男演员奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '中国电影百年百位优秀演员', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '六届十大劲歌金曲最受欢迎男歌星奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '两届ChannelV亚洲最受欢迎歌手奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '世界十大杰出青年奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '香港特别行政区荣誉勋章佩戴者', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '中国电影百年形象大使', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '吉尼斯世界纪录中获奖最多的香港男歌手', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '朱丽倩', type: 'resolved', 'rela': '妻子'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '刘向蕙', type: 'resolved', 'rela': '女儿'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '华仔天地', type: 'resolved', 'rela': '全球粉丝会'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '佛教', type: 'resolved', 'rela': '信仰'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '广东新会', type: 'resolved', 'rela': '籍贯'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '中国残疾人福利基金会副理事长', type: 'resolved', 'rela': '职务'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '刘德盛', type: 'resolved', 'rela': '弟弟'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '喻可欣', type: 'resolved', 'rela': '前女友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '林志玲', type: 'resolved', 'rela': '好友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '泰迪·罗宾', type: 'resolved', 'rela': '好友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '金城武', type: 'resolved', 'rela': '好友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '刘嘉玲', type: 'resolved', 'rela': '好友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '林家栋', type: 'resolved', 'rela': '好友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '白龙王', type: 'resolved', 'rela': '好友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '郑秀文', type: 'resolved', 'rela': '好友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '关之琳', type: 'resolved', 'rela': '好友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '梅艳芳', type: 'resolved', 'rela': '好友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '任贤齐', type: 'resolved', 'rela': '好友'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '秦海璐', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '钟楚红', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '刘天健', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '爱新觉罗·启星', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '吴倩莲', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '彭浩翔', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '释行宇', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '陈建州', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '陈玉莲', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '贾晓晨', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '胡军', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '苗侨伟', type: 'resolved', 'rela': '搭档'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '彭登怀', type: 'resolved', 'rela': '老师'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '陈少霞', type: 'resolved', 'rela': '学生'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '崔始源', type: 'resolved', 'rela': '学生'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '高妙思', type: 'resolved', 'rela': '同门'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '人潮汹涌', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '战疫天使', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '拆弹专家2', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '热血合唱团', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '莫斯科大劫案', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '香港地', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '花椒之味', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '扫毒2：天地对决', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '追龙', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '侠盗联盟', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '拆弹专家', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '铁道飞虎', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '长城', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '王牌逗王牌', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '我的特工爷爷', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '澳门风云3', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '解救吾先生', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '失孤', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '我的少女时代', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '风暴', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '盲探', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天机·富春山居图', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '桃姐', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '寒战', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '新少林寺', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '我知女人心', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '建党伟业', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '狄仁杰之通天帝国', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '未来警察', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '游龙戏凤', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '建国大业', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '三国之见龙卸甲', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '投名状', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '兄弟之生死同盟', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '门徒', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '墨攻', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '再说一次我爱你', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '童梦奇缘', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '十面埋伏', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天下无贼', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '江湖', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '无间道3：终极无间', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '龙凤斗', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '魔幻厨房', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '大只佬', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '无间道', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '蓝血人', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '呖咕呖咕新年财', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '老鼠爱上猫', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '爱君如梦', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '瘦身男女', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '全职杀手', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '决战紫禁之巅', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '孤男寡女', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '阿虎', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '赌侠大战拉斯维加斯', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '暗战', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '龙在边缘', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '黑马王子', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '爱情命运号', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '赌侠1999', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '龙在江湖', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '黑金', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天地雄心', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天若有情之烽火佳人', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '新上海滩', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '1/2次同床', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '烈火战车', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '大冒险家', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '杀手的童话', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '刀剑笑', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '醉拳II', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '醉拳Ⅲ', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天与地', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '至尊三十六计之偷天换日', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '反斗马骝', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '超级学校霸王', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天长地久', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '赌城大亨II之至尊无敌', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '侠圣', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '与龙共舞', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '庙街十二少', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '战神传说', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '龙腾四海', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '五亿探长雷洛传Ⅱ父子情仇', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '哗！英雄', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '赌城大亨之新哥传奇', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '绝代双骄', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '九二神雕侠侣之痴心情长剑', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '龙神太子', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '群星会', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '至尊无上Ⅱ之永霸天下', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '五亿探长雷洛传', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '九一神雕侠侣', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '极道追踪', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '五虎将之决裂', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '整蛊专家', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '冲击天子门生', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '惊天十二小时', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '中环英雄', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '火烧岛', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '赌侠', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天若有情', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '阿飞正传', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '再战江湖', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '摩登如来神掌', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '富贵兵团', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '狱中龙', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '川岛芳子', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '义胆雄心', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '至尊计状元才', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '异域', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '第一茧', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '精装追女仔3狼之一族', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '法内情大结局', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '赌神', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '傲气雄鹰', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '爱人同志', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '至尊无上', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '同根生', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '专钓大鳄', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '最佳男朋友', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '小小小警察', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '省港旗兵3', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '神行太保', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '人海孤鸿', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '轰天龙虎会', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '飙城', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '旺角卡门', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '神探父子兵', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '精装追女仔2', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '猎鹰计划', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '龙之家族', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '最佳损友闯情关', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '最佳损友', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '法内情', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '中国最后一个太监', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '群龙夺宝', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '江湖情之英雄好汉', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '肝胆相照', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '江湖情', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '魔翡翠', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '最佳福星', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '夏日福星', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '法外情', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '停不了的爱', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '临歧', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '毁灭号地车', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '家在香港', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '投奔怒海', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '彩云曲', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '上海滩十三太保', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '现代爱情恋曲', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '天狼劫', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '真命天子', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '圣剑天骄', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '香港八五', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '皇上保重', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '杨家将', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '鼓舞', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '魔域桃源', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '鹿鼎记', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '宝芝林', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '神雕侠侣', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '奔向太阳', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '临岐之决', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '老洞', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '四季情', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '花艇小英雄', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '猎鹰', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '孤城客', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '苏乞儿', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '戏班小子', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '英雄出少年', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '二人三足', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '千王群英会', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '江湖再见', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '香港八一', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '鳄鱼潭', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '无双谱', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '过客', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '中国电影华表奖优秀男演员奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '香港电影金像奖最佳男配角奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '华语电影传媒大奖最佳男演员奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '釜山国际电影节亚洲年度电影人奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '华语电影传媒大奖百家传媒年度致敬电影人奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '华语电影传媒大奖观众票选最受瞩目男演员奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '十大中文金曲优秀流行歌手大奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '十大中文金曲全国最佳男歌手奖', type: 'resolved', 'rela': '主要成就'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '男', type: 'resolved', 'rela': '性别'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '金手指', type: 'resolved', 'rela': '主要作品'},
+{source: '刘德华[华语影视男演员、歌手、制片人、作词人]', target: '唐人街探案3', type: 'resolved', 'rela': '主要作品'},
+];
+var nodes = {};
+
+links.forEach(function(link)
+{
+  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
+});
+
+var width = 1920, height = 1080;
+
+var force = d3.layout.force()
+    .nodes(d3.values(nodes))
+    .links(links)
+    .size([width, height])
+    .linkDistance(180)
+    .charge(-1500)
+    .on("tick", tick)
+    .start();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var marker=
+    svg.append("marker")
+    .attr("id", "resolved")
+    .attr("markerUnits","userSpaceOnUse")
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX",32)
+    .attr("refY", -1)
+    .attr("markerWidth", 12)
+    .attr("markerHeight", 12)
+    .attr("orient", "auto")
+    .attr("stroke-width",2)
+    .append("path")
+    .attr("d", "M0,-5L10,0L0,5")
+    .attr('fill','#000000');
+
+var edges_line = svg.selectAll(".edgepath")
+    .data(force.links())
+    .enter()
+    .append("path")
+    .attr({
+          'd': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
+          'class':'edgepath',
+          'id':function(d,i) {return 'edgepath'+i;}})
+    .style("stroke",function(d){
+         var lineColor;
+		 lineColor="#B43232";
+         return lineColor;
+     })
+    .style("pointer-events", "none")
+    .style("stroke-width",0.5)
+    .attr("marker-end", "url(#resolved)" );
+
+var edges_text = svg.append("g").selectAll(".edgelabel")
+.data(force.links())
+.enter()
+.append("text")
+.style("pointer-events", "none")
+.attr({  'class':'edgelabel',
+               'id':function(d,i){return 'edgepath'+i;},
+               'dx':80,
+               'dy':0
+               });
+
+edges_text.append('textPath')
+.attr('xlink:href',function(d,i) {return '#edgepath'+i})
+.style("pointer-events", "none")
+.text(function(d){return d.rela;});
+
+var circle = svg.append("g").selectAll("circle")
+    .data(force.nodes())
+    .enter().append("circle")
+    .style("fill",function(node){
+        var color;
+        var link=links[node.index];
+		color="#F9EBF9";
+        return color;
+    })
+    .style('stroke',function(node){ 
+        var color;
+        var link=links[node.index];
+		color="#A254A2";
+        return color;
+    })
+    .attr("r", 28)
+    .on("click",function(node)
+	{
+        edges_line.style("stroke-width",function(line){
+            console.log(line);
+            if(line.source.name==node.name || line.target.name==node.name){
+                return 4;
+            }else{
+                return 0.5;
+            }
+        });
+    })
+    .call(force.drag);
+
+var text = svg.append("g").selectAll("text")
+    .data(force.nodes())
+    .enter()
+    .append("text")
+    .attr("dy", ".35em")  
+    .attr("text-anchor", "middle")
+    .style('fill',function(node){
+        var color;
+        var link=links[node.index];
+		color="#A254A2";
+        return color;
+    }).attr('x',function(d){
+        var re_en = /[a-zA-Z]+/g;
+        if(d.name.match(re_en)){
+             d3.select(this).append('tspan')
+             .attr('x',0)
+             .attr('y',2)
+             .text(function(){return d.name;});
+        }
+        
+        else if(d.name.length<=4){
+             d3.select(this).append('tspan')
+            .attr('x',0)
+            .attr('y',2)
+            .text(function(){return d.name;});
+        }else{
+            var top=d.name.substring(0,4);
+            var bot=d.name.substring(4,d.name.length);
+
+            d3.select(this).text(function(){return '';});
+
+            d3.select(this).append('tspan')
+                .attr('x',0)
+                .attr('y',-7)
+                .text(function(){return top;});
+
+            d3.select(this).append('tspan')
+                .attr('x',0)
+                .attr('y',10)
+                .text(function(){return bot;});
+        }
+    });
+
+function tick() {
+  circle.attr("transform", transform1);
+  text.attr("transform", transform2);
+
+  edges_line.attr('d', function(d) { 
+      var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
+      return path;
+  });  
+    
+  edges_text.attr('transform',function(d,i){
+        if (d.target.x<d.source.x){
+            bbox = this.getBBox();
+            rx = bbox.x+bbox.width/2;
+            ry = bbox.y+bbox.height/2;
+            return 'rotate(180 '+rx+' '+ry+')';
+        }
+        else {
+            return 'rotate(0)';
+        }
+   });
+}
+
+function linkArc(d) {
+  return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y
+}
+
+function transform1(d) {
+  return "translate(" + d.x + "," + d.y + ")";
+}
+function transform2(d) {
+      return "translate(" + (d.x) + "," + d.y + ")";
+}
+
+</script>
+
+
