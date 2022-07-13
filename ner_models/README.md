@@ -80,7 +80,7 @@ https://github.com/kamalkraj/BERT-NER
 
 
 参考：https://github.com/kyzhouhzau/NLPGNN
-
+ ```
 [1] BERT：用于语言理解的深度双向转换器的预训练
 [2] ALBERT：用于语言表示的自监督学习的 Lite BERT
 [3]语言模型是无监督的多任务学习者
@@ -95,4 +95,5 @@ https://github.com/kamalkraj/BERT-NER
 [12]用于文本分类的图卷积网络
 [13]用于文本分类的张量图卷积网络
 [14]深入了解用于半监督学习的图卷积网络
+```
 
