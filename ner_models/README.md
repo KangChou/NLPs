@@ -97,3 +97,10 @@ https://github.com/kamalkraj/BERT-NER
 [14]深入了解用于半监督学习的图卷积网络
 ```
 
+命名实体识别（NER）标注神器: https://blog.csdn.net/qq_44193969/article/details/123298406
+
+实践：https://blog.csdn.net/qq_44193969/article/details/116008734
+
+https://github.com/seanzhang-zhichen/PytorchBilstmCRF-Information-Extraction
+
+https://blog.csdn.net/weixin_40846933/article/details/106384566
