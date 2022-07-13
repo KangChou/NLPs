@@ -66,4 +66,33 @@ ner综述： https://blog.csdn.net/weixin_45884316/article/details/118684681
 
 使用 CLIP 将图像和句子嵌入到固定长度的向量中 https://github.com/jina-ai/clip-as-service
 
+other: 
+
+https://github.com/Rhine97/NLP-NER-models/tree/master/JupyterNotebook_Version/dataset
+
+https://github.com/Hyfred/Pytroch_NER_tutorial
+
+https://github.com/cs230-stanford/cs230-code-examples/tree/master/pytorch/nlp
+
+https://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html#sphx-glr-beginner-nlp-advanced-tutorial-py
+
+https://github.com/kamalkraj/BERT-NER
+
+
+参考：https://github.com/kyzhouhzau/NLPGNN
+
+[1] BERT：用于语言理解的深度双向转换器的预训练
+[2] ALBERT：用于语言表示的自监督学习的 Lite BERT
+[3]语言模型是无监督的多任务学习者
+[4]用于量子化学的神经消息传递
+[ 5]使用图卷积网络进行半监督分类
+[6]图注意网络
+[7]图神经网络有多强大？
+[8] GraphSAGE：大图上的归纳表示学习
+[9]扩散改进了图学习
+[10]基准图神经网络
+[11]用于文本分类的文本级图神经网络
+[12]用于文本分类的图卷积网络
+[13]用于文本分类的张量图卷积网络
+[14]深入了解用于半监督学习的图卷积网络
 
