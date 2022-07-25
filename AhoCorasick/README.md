@@ -202,3 +202,10 @@ if __name__ == '__main__':
 https://github.com/Guangyi-Z/py-aho-corasick
 
 https://github.com/Superchen17/Aho-Corasick
+
+
+其他查询算法：
+
+https://zhuanlan.zhihu.com/p/500158548
+
+https://blog.csdn.net/zichen_ziqi/article/details/104246446
