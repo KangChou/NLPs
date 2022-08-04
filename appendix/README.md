@@ -1,4 +1,22 @@
 
+词向量
+https://blog.csdn.net/mawenqi0729/article/details/80698350
+
+http://zake7749.github.io/2016/08/28/word2vec-with-gensim/
+
+https://github.com/zake7749/word2vec-tutorial
+
+https://textminingonline.com/training-word2vec-model-on-english-wikipedia-by-gensim
+
+https://blog.csdn.net/sinat_26917383/article/details/69803018
+
+https://blog.csdn.net/qq_28840013/article/details/89681499
+
+https://blog.csdn.net/The_lastest/article/details/81734980
+
+https://blog.csdn.net/sdu_hao/article/details/87713148
+
+
 
 ![lQLPJxaO-N5VdYXNDqLND9ewMxtGvzCH1ycC60_UZsAnAA_4055_3746](https://user-images.githubusercontent.com/36963108/182768970-af8039c4-7aa9-4a2e-bc72-7aa076e300c7.png)
 
