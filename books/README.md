@@ -1,3 +1,26 @@
+好东西：https://github.com/Kyubyong/nlp_tasks
+
+https://github.com/songyingxin/NLPer-Interview
+
+总结梳理自然语言处理工程师(NLP)需要积累的各方面知识，包括面试题，各种基础知识，工程能力等等，提升核心竞争力 https://github.com/DA-southampton/NLP_ability
+
+史上最全Transformer面试题
+答案解析(1)-史上最全Transformer面试题
+Pytorch代码分析--如何让Bert在finetune小数据集时更“稳”一点
+解决老大难问题-如何一行代码带你随心所欲重新初始化bert的某些参数(附Pytorch代码详细解读)
+3分钟从零解读Transformer的Encoder
+原版Transformer的位置编码究竟有没有包含相对位置信息
+BN踩坑记--谈一下Batch Normalization的优缺点和适用场景
+谈一下相对位置编码
+NLP任务中-layer-norm比BatchNorm好在哪里
+谈一谈Decoder模块
+Transformer的并行化
+Transformer全部文章合辑
+RNN的梯度消失有什么与众不同的地方.md
+VIT-如何将Transformer更好的应用到CV领域
+
+
+
 好书：https://github.com/FudanNLP/nlp-beginner
 
 论文与code:https://github.com/keon/awesome-nlp
