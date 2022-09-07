@@ -1,8 +1,20 @@
+好书：https://github.com/FudanNLP/nlp-beginner
+
+论文与code:https://github.com/keon/awesome-nlp
+
+跟踪自然语言处理的进展:https://github.com/sebastianruder/NLP-progress
 
 元研究：https://research.facebook.com/research-areas/
 
+此项目是机器学习(Machine Learning)、深度学习(Deep Learning)、NLP面试中常考到的知识点和代码实现，也是作为一个算法工程师必会的理论基础知识。https://github.com/NLP-LOVE/ML-NLP
+
+https://github.com/graykode/nlp-tutorial/blob/master/5-2.BERT/BERT.ipynb
+
 NLP-Models-Tensorflow  https://github.com/huseinzol05/NLP-Models-Tensorflow
 
+相似度 https://github.com/duoergun0729/nlp/blob/master/%E6%96%87%E6%A1%A3%E7%9B%B8%E4%BC%BC%E5%BA%A6.md
+
+https://github.com/duoergun0729/nlp
 
 https://github.com/fighting41love/funNLP
 
