@@ -1,4 +1,9 @@
 
+元研究：https://research.facebook.com/research-areas/
+
+NLP-Models-Tensorflow  https://github.com/huseinzol05/NLP-Models-Tensorflow
+
+
 https://github.com/fighting41love/funNLP
 
 https://github.com/keon/awesome-nlp
