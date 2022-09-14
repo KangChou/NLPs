@@ -3,6 +3,8 @@
 # NLPs
 Deep learning speech learning library
 
+Py2neo 手册 \
+Py2neo是一个客户端库和工具包，用于从Python应用程序和命令行中使用Neo4j 。该库支持 Bolt 和 HTTP，并提供高级 API、OGM、管理工具、交互式控制台、Pygments 的 Cypher 词法分析器以及许多其他花里胡哨。从版本 2021.1 开始，Py2neo 包含对路由的完全支持，正如 Neo4j 集群所公开的那样。这可以使用neo4j://...URI 或传递routing=True给Graph构造函数来启用。https://py2neo.org/2021.1/
 
 
 
