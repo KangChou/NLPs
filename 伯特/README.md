@@ -8,7 +8,8 @@ Transformer代码阅读： http://fancyerii.github.io/2019/03/09/transformer-cod
 
 图解Transformer：http://fancyerii.github.io/2019/03/09/transformer-illustrated/
 
-https://zhuanlan.zhihu.com/p/394780960
+
+讲的不错的文章：https://zhuanlan.zhihu.com/p/394780960
 ```
 生成训练样本:create_pretraining_data.py
 原始样本
